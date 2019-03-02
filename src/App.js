@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Word from './Word';
+import {Word} from './components/Word';
 import './App.css';
 
 class App extends Component {
@@ -13,5 +13,5 @@ class App extends Component {
     );
   }
 }
-
 export default App;
+
