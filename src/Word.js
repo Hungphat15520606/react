@@ -4,8 +4,8 @@ export class Word extends Component {
   render() {
     return (
       <div>
-          <h3 className="btn btn-success">One</h3>
-          <h3>Mot</h3>
+          <h3 style={{color : 'green' ,margin : 10}}>{this.props.en}</h3>
+          <h3>{this.props.vn}</h3>
       </div>
     );
   }
