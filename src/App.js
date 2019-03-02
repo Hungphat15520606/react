@@ -6,8 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Word/>
-          <Word/>
+          <Word wordInfo={{en : 'One' , vn : 'Mot'}}/>
+          <Word wordInfo={{en : 'Two' , vn : 'Hai'}}/>
       </div>
       
     );
