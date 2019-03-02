@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import {Word} from './components/Word';
 import './App.css';
+// import Loop from './components/Loop';
+
+const words = [
+   {id : 'a1' , en : 'One' , vn : 'Mot' , isMemorized : true},
+   {id : 'a2' , en : 'Two' , vn : 'Hai' , isMemorized : false},
+   {id : 'a3' , en : 'Three' , vn : 'Ba' , isMemorized : true}
+]
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <Word wordInfo={{en : 'One' , vn : 'Mot'}}/>
-          <Word wordInfo={{en : 'Two' , vn : 'Hai'}}/>
+         {words.map(word => <Word wordInfo={word}/>)}
       </div>
       
     );
