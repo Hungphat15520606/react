@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-import {Word} from './components/Word';
+import List from './components/List';
 import './App.css';
 // import Loop from './components/Loop';
-
-const words = [
-   {id : 'a1' , en : 'One' , vn : 'Mot' , isMemorized : true},
-   {id : 'a2' , en : 'Two' , vn : 'Hai' , isMemorized : false},
-   {id : 'a3' , en : 'Three' , vn : 'Ba' , isMemorized : true}
-]
+// import Box from './components/Box';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-         {words.map(word => <Word wordInfo={word}/>)}
+          <List/>
+          {/* <Box/> */}
       </div>
       
     );
