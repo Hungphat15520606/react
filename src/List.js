@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Word from './Word';
+// import Word from './Word';
 const words = [
     {id : 'a1' , en : 'One' , vn : 'Mot' , isMemorized : true},
     {id : 'a2' , en : 'Two' , vn : 'Hai' , isMemorized : false},
@@ -9,6 +9,10 @@ export default class List extends Component {
   constructor(props){
     super(props);
     this.state = {words}
+  }
+  removeWord(id){
+    const newWords = this.state.words.filter(w => w.id != id);
+    this.setState({words :newWords});
   }
   render() {
     return (
@@ -27,7 +31,8 @@ export default class List extends Component {
                   {word.isMemorized ? 'Forgot' : 'Memorized'}
                 </button>
                 <button
-                  className="btn btn-warning">
+                  className="btn btn-warning"
+                  onClick={() => this.removeWord(word.id)}>
                   Remove
                 </button>
             </div>
